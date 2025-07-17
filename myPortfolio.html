@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>portfolio</title>
+    <link href="myPortfolio.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="portfolioHeader">
+      <div class="header-top">
+        <img src="beautifulFlower.jpg" alt="Profile photo" />
+        <div class="name-title">
+          <h1 class="name">Penugonda Devi Harshitha</h1>
+          <p class="title">Full Stack Developer</p>
+        </div>
+      </div>
+
+      <div class="nav-container">
+        <nav>
+          <a href="#" onclick="showSection('home')" id="home-link">Home</a>
+          <a
+            href="#"
+            onclick="showSection('about')"
+            id="about-link"
+            class="active"
+            >About Me</a
+          >
+          <a href="#" onclick="showSection('projects')" id="projects-link"
+            >Projects</a
+          >
+          <a href="#" onclick="showSection('edu')" id="edu-link">Education</a>
+          <a href="#" onclick="showSection('skills')" id="skills-link"
+            >Skills</a
+          >
+          <a href="#" onclick="showSection('contact')" id="contact-link"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </div>
+
+    <div class="content-container">
+      <section id="home" class="content-section">
+        <h1>WELCOME TO MY PORTFOLIO</h1>
+      </section>
+      <section id="about" class="content-section" style="display: none">
+        <h1>Hi, I'm Devi Harshitha</h1>
+        <h2>Full Stack Developer</h2>
+        <p>
+          I love building interactive websites and solving real-world problems
+          through code.
+        </p>
+      </section>
+      <section id="projects" class="content-section" style="display: none">
+        <div class="project-card">
+          <h3 class="project-title">Bus Reservation System</h3>
+          <p class="project-description">
+            Developed a web app for bus ticket booking with separate admin and
+            user portals. Enabled admins to add, update, and manage bus details
+            and availability. Enabled filtered bus search with smart route
+            matching by stops and travel date. Implemented booking flow with
+            passenger details input and PDF ticket generation.
+          </p>
+          <div class="project-tools">
+            <span class="tool">HTML</span>
+            <span class="tool">CSS</span>
+            <span class="tool">JavaScript</span>
+            <span class="tool">PHP</span>
+            <span class="tool">MySQL</span>
+          </div>
+          <a
+            href="https://github.com/2006harshitha/BusRservationSystem"
+            class="project-link"
+            >View on GitHub</a
+          >
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title">Emotional based music player</h3>
+          <p class="project-description">
+            Automated mood-based music playback (Happy, Sad, Angry, etc.) with
+            Pygame audio engine. Integrated voice command controls for
+            hands-free operation: Play, Pause, Next, Stop, What's playing.
+            Displayed emotion with confidence levels and provided wellness
+            activity suggestions based on mood.
+          </p>
+          <div class="project-tools">
+            <span class="tool">deepface</span>
+            <span class="tool">pygame</span>
+            <span class="tool">openCV</span>
+            <span class="tool">Speech recognition</span>
+          </div>
+          <a
+            href="https://github.com/2006harshitha/EmotionBasedMusicPlayer"
+            class="project-link"
+            >View on GitHub</a
+          >
+        </div>
+      </section>
+      <section id="edu" class="content-section" style="display: none">
+        <div class="education-item">
+          <h3>SRM University AP</h3>
+          <p>Bachelor of Technology (B.Tech), CGPA: 9.05</p>
+        </div>
+        <div class="education-item">
+          <h3>Sri Chaitanya Junior College</h3>
+          <p>Pre-University Education, Score: 96.4%</p>
+        </div>
+        <div class="education-item">
+          <h3>Vijayaniketan E/M High School</h3>
+          <p>Schooling, Score: 100%</p>
+        </div>
+      </section>
+      <section id="skills" class="content-section" style="display: none">
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <ul class="skill-list">
+            <li>C</li>
+            <li>C++</li>
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Web Technologies</h3>
+          <ul class="skill-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Frameworks</h3>
+          <ul class="skill-list">
+            <li>React js</li>
+            <li>Node js</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Database</h3>
+          <ul class="skill-list">
+            <li>SQL</li>
+            <li>DBMS</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Tools</h3>
+          <ul class="skill-list">
+            <li>VS Code</li>
+            <li>GitHub</li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact" class="content-section" style="display: none">
+        <h3>Contact Details</h3>
+        <ul class="contact-list">
+          <li>
+            Email:
+            <a href="mailto:deviharshitha_penugonda@srmap.edu.in"
+              >deviharshitha_penugonda@srmap.edu.in</a
+            >
+          </li>
+          <li>Phone: +91 1234567890</li>
+          <li>
+            LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/devi-harshitha-penugonda"
+              target="_blank"
+              >Devi Harshitha Penugonda</a
+            >
+          </li>
+          <li>
+            GitHub:
+            <a href="https://github.com/2006harshitha" target="_blank"
+              >2006harshitha</a
+            >
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <script>
+      // Set default active section to Home
+      document.addEventListener("DOMContentLoaded", function () {
+        // Hide all sections except home
+        document.querySelectorAll(".content-section").forEach((section) => {
+          section.style.display = "none";
+        });
+        document.getElementById("home").style.display = "block";
+
+        // Set home link as active
+        document.querySelectorAll("nav a").forEach((link) => {
+          link.classList.remove("active");
+        });
+        document.getElementById("home-link").classList.add("active");
+      });
+
+      function showSection(sectionId) {
+        const sections = document.querySelectorAll(".content-section");
+        const navLinks = document.querySelectorAll("nav a");
+
+        sections.forEach((section) => {
+          section.style.display = "none";
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+        });
+
+        document.getElementById(sectionId).style.display = "block";
+        event.currentTarget.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
